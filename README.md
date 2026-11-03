@@ -6,11 +6,11 @@
 
 
 
-Questo progetto analizza un dataset di vendite online con l'obiettivo di individuare i principali trend commerciali, comprendere il comportamento dei clienti e ottenere informazioni utili a supportare le decisioni aziendali.
+Questo progetto analizza le transazioni di un negozio online con l'obiettivo di individuare i principali trend commerciali, comprendere il comportamento dei clienti e ricavare informazioni utili a supportare le decisioni aziendali.
 
 
 
-L'analisi è stata sviluppata utilizzando \*\*Python\*\* per la pulizia e l'esplorazione dei dati e \*\*Power BI\*\* per la realizzazione di una dashboard interattiva.
+Il progetto è stato sviluppato utilizzando \*\*Python\*\* per la pulizia, la preparazione e l'analisi dei dati e \*\*Microsoft Power BI\*\* per la realizzazione di una dashboard interattiva.
 
 
 
@@ -40,35 +40,47 @@ L'analisi è stata sviluppata utilizzando \*\*Python\*\* per la pulizia e l'espl
 
 ```text
 
-analisi-clienti/
+analisi-clienti-retail/
 
 │
 
-├── Online Retail.xlsx
+├── data/
 
-├── analisi\_clienti.ipynb
+│   ├── Online Retail.xlsx
+
+│   ├── vendite\_pulite.csv
+
+│   └── clienti\_rfm.csv
+
+│
+
+├── images/
+
+│   ├── andamento\_mensile.png
+
+│   ├── ricavi\_paese.png
+
+│   ├── ricavi\_segmenti.png
+
+│   ├── segmentazione\_clienti.png
+
+│   ├── top\_10\_prodotti.png
+
+│   └── dashboard\_powerbi.png
+
+│
+
+├── notebook/
+
+│   └── analisi\_clienti.ipynb
+
+│
 
 ├── Dashboard\_Analisi\_Clienti.pbix
 
-├── vendite\_pulite.csv
+├── README.md
 
-├── clienti\_rfm.csv
-
-├── .gitignore
-
-│
-
-└── images/
-
-&#x20;   ├── andamento\_mensile.png
-
-&#x20;   ├── ricavi\_paese.png
-
-&#x20;   ├── ricavi\_segmenti.png
-
-&#x20;   ├── segmentazione\_clienti.png
-
-&#x20;   └── top\_10\_prodotti.png
+└── .gitignore
 
 ```
 
@@ -82,7 +94,7 @@ analisi-clienti/
 
 
 
-\- Analisi della struttura del dataset.
+\- Analisi della struttura e delle caratteristiche del dataset.
 
 \- Individuazione e rimozione dei duplicati.
 
@@ -90,7 +102,7 @@ analisi-clienti/
 
 \- Identificazione delle transazioni cancellate e delle anomalie.
 
-\- Creazione di un dataset contenente le vendite positive.
+\- Preparazione di un dataset contenente le vendite positive.
 
 \- Calcolo del fatturato per transazione.
 
@@ -110,7 +122,7 @@ Sono stati analizzati:
 
 \- Quantità vendute.
 
-\- Prodotti acquistati.
+\- Numero di prodotti distinti.
 
 \- Distribuzione geografica dei ricavi.
 
@@ -154,7 +166,33 @@ I clienti sono stati suddivisi in quattro segmenti:
 
 
 
-È stata realizzata una dashboard per visualizzare i principali indicatori e risultati dell'analisi attraverso KPI e grafici interattivi.
+È stata realizzata una dashboard interattiva per rappresentare i principali indicatori e risultati dell'analisi attraverso KPI e grafici.
+
+
+
+La dashboard comprende:
+
+
+
+\- Ricavi totali.
+
+\- Numero ordini.
+
+\- Prodotti venduti.
+
+\- Clienti identificati.
+
+\- Quantità totale venduta.
+
+\- Ricavi per Paese.
+
+\- Andamento mensile dei ricavi.
+
+\- Top 10 prodotti per ricavi.
+
+\- Segmentazione clienti RFM.
+
+\- Ricavi per segmento cliente.
 
 
 
@@ -162,7 +200,7 @@ I clienti sono stati suddivisi in quattro segmenti:
 
 
 
-L'analisi Python ha evidenziato:
+I risultati riportati di seguito fanno riferimento all'analisi svolta con Python sul dataset delle vendite positive.
 
 
 
@@ -170,7 +208,7 @@ L'analisi Python ha evidenziato:
 
 |---|---:|
 
-| Ricavi totali delle vendite positive | 10.642.110,80 € |
+| Ricavi totali | 10.642.110,80 € |
 
 | Numero ordini | 19.960 |
 
@@ -184,7 +222,7 @@ L'analisi Python ha evidenziato:
 
 
 
-\### Risultati della segmentazione RFM
+\### Segmentazione clienti
 
 
 
@@ -192,7 +230,7 @@ I migliori clienti rappresentano circa il \*\*21,7% dei clienti identificati\*\*
 
 
 
-Il dato evidenzia l'importanza della fidelizzazione e delle strategie di retention.
+Questo risultato evidenzia l'importanza delle strategie di fidelizzazione e retention.
 
 
 
@@ -200,7 +238,7 @@ Il dato evidenzia l'importanza della fidelizzazione e delle strategie di retenti
 
 
 
-Il Regno Unito rappresenta il principale mercato, con circa l'84,6% dei ricavi complessivi delle vendite positive.
+Il Regno Unito rappresenta il principale mercato, generando circa l'\*\*84,6% dei ricavi complessivi\*\* delle vendite positive.
 
 
 
@@ -210,31 +248,49 @@ Il Regno Unito rappresenta il principale mercato, con circa l'84,6% dei ricavi c
 
 \### Ricavi per Paese
 
+
+
 !\[Ricavi per Paese](images/ricavi\_paese.png)
 
 
 
-\### Top 10 prodotti
+\### Top 10 prodotti per ricavi
+
+
 
 !\[Top 10 prodotti](images/top\_10\_prodotti.png)
 
 
 
-\### Andamento mensile
+\### Andamento mensile dei ricavi
+
+
 
 !\[Andamento mensile](images/andamento\_mensile.png)
 
 
 
-\### Segmentazione clienti
+\### Segmentazione clienti RFM
+
+
 
 !\[Segmentazione clienti](images/segmentazione\_clienti.png)
 
 
 
-\### Ricavi per segmento
+\### Ricavi per segmento cliente
+
+
 
 !\[Ricavi per segmento](images/ricavi\_segmenti.png)
+
+
+
+\### Dashboard Power BI
+
+
+
+!\[Dashboard Power BI](images/dashboard\_powerbi.png)
 
 
 
@@ -242,7 +298,7 @@ Il Regno Unito rappresenta il principale mercato, con circa l'84,6% dei ricavi c
 
 
 
-Dataset utilizzato: \*\*Online Retail\*\*, relativo alle transazioni di un negozio online britannico.
+Il progetto utilizza il dataset \*\*Online Retail\*\*, disponibile presso l'UCI Machine Learning Repository.
 
 
 
@@ -250,7 +306,15 @@ Fonte: \[UCI Machine Learning Repository – Online Retail](https://archive.ics.
 
 
 
-L'analisi dei ricavi considera le vendite positive, escludendo le transazioni cancellate e le righe con quantità o prezzo non positivi. I resi non vengono quindi sottratti dal fatturato presentato.
+Il dataset contiene transazioni commerciali di un negozio online britannico.
+
+
+
+Per l'analisi principale sono state considerate le vendite positive, escludendo le transazioni cancellate e le righe con quantità o prezzo unitario non positivi.
+
+
+
+\*\*Nota metodologica:\*\* i ricavi riportati rappresentano il valore delle vendite positive e non il fatturato netto dopo la sottrazione dei resi.
 
 
 
@@ -258,15 +322,21 @@ L'analisi dei ricavi considera le vendite positive, escludendo le transazioni ca
 
 
 
-\- Sviluppo di un processo di pulizia e preparazione dei dati.
+\- Pulizia e preparazione di dati reali.
 
 \- Analisi esplorativa con Python.
 
+\- Calcolo dei principali KPI commerciali.
+
 \- Applicazione della metodologia RFM.
 
-\- Creazione di una dashboard interattiva con Power BI.
+\- Segmentazione della clientela.
 
-\- Estrazione di informazioni utili sul comportamento dei clienti e sulle performance commerciali.
+\- Creazione di visualizzazioni con Matplotlib.
+
+\- Realizzazione di una dashboard interattiva con Power BI.
+
+\- Comunicazione dei risultati attraverso un progetto completo di Data Analytics.
 
 
 
